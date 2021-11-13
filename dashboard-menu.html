@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <main class="app">
+        <!-- Menu -->
+            <section class="w-100 pet-menu">
+                <div class="pet-menu-header">
+                    <h2>Menu</h2>
+                    <a href="./dashboard-dogs.html" class="pet-menu-close">
+                        <div class="menu-close">
+                            <div class="menu-close-line menu-close-line-1"></div><div class="menu-close-line menu-close-line-2"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-100 d-flex flex-column align-center justify-center pet-menu-buttons">
+                    <a href="./index.html" class="w-100 button-adopt button-adopt--home">Home</a>
+                    <a href="./dashboard-dogs.html" class="w-100 button-adopt button-adopt--dog">Dog</a>
+                    <a href="./dashboard-cats.html" class="w-100 button-adopt button-adopt--cat">Cat</a>
+                </div>
+            </section>
+        <!-- End Menu -->
+       <section class="p-relative w-100 h-100 dashboard dashboard__dogs">
+
+           <header class="w-100 d-flex align-center justify-between home__header dashboard__header">
+               <img width="30px" src="./images/chevron-left.svg" alt="">
+               <h2>Search</h2>
+               <div class="menu">
+                   <div class="menu-line"></div>
+                   <div class="menu-line"></div>
+                   <div class="menu-line"></div>
+               </div>
+            </header>
+
+           <section class="home__title d-flex flex-column w-100 align-center justify-center text-center">
+               <div class="w-100 d-flex align-center search-bar">
+                   <img src="./images/search.svg" class="search-bar-icon"></img src="./images/search.svg">
+                   <input placeholder="search" type="text" class="input-search">
+               </div>
+
+               <article class="w-100 d-flex flex-row align-center justify-between">
+                   <div class="pet-selection pet-selection--dog">
+                       <img width="24px" src="./images/fa-solid_dog.svg" alt="">
+                       <span>Dogs</span>
+                   </div>
+
+                   <a href="./dashboard-cats.html" class="pet-selection">
+                        <img width="24px" src="./images/fa-solid_cat.svg" alt="">
+                        <span>Cats</span>
+                   </a>
+               </article>
+           </section>
+
+           <section class="p-relative d-flex flex-column align-center justify-center w-100 dashboard-pets">
+
+            <a href="./dog-detail.html" class="pet-card pet-card--dog">
+                <figure class="pet-card__image"><img src="./images/reigner.png" alt=""></figure>
+                <div class="pet-card__content">
+                    <div>
+                        <h3 class="pet-card__name">Name</h3>
+                        <span class="pet-card__race">race</span>
+                    </div>
+
+                    <strong class="pet-card__price">$300</strong>
+                </div>
+            </a>
+            <a href="./dog-detail.html" class="pet-card pet-card--dog">
+                <figure class="pet-card__image"><img src="./images/reigner.png" alt=""></figure>
+                <div class="pet-card__content">
+                    <div>
+                        <h3 class="pet-card__name">Name</h3>
+                        <span class="pet-card__race">race</span>
+                    </div>
+
+                    <strong class="pet-card__price">$300</strong>
+                </div>
+            </a>
+            <a href="./dog-detail.html" class="pet-card pet-card--dog">
+                <figure class="pet-card__image"><img src="./images/reigner.png" alt=""></figure>
+                <div class="pet-card__content">
+                    <div>
+                        <h3 class="pet-card__name">Name</h3>
+                        <span class="pet-card__race">race</span>
+                    </div>
+
+                    <strong class="pet-card__price">$300</strong>
+                </div>
+            </a>
+            <a href="./dog-detail.html" class="pet-card pet-card--dog">
+                <figure class="pet-card__image"><img src="./images/reigner.png" alt=""></figure>
+                <div class="pet-card__content">
+                    <div>
+                        <h3 class="pet-card__name">Name</h3>
+                        <span class="pet-card__race">race</span>
+                    </div>
+
+                    <strong class="pet-card__price">$300</strong>
+                </div>
+            </a>
+               
+           </section>
+       </section> 
+    </main>
+    
+</body>
+</html>

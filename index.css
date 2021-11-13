@@ -1,0 +1,442 @@
+@import url(./styles/utils.css);
+@import url(./styles/fonts.css);
+@import url(./styles/colors.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'montserrat';
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.app {
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    max-width: 330px;
+    margin: auto;
+    height: 600px;
+    overflow-y: scroll;
+    border-radius: 21px;
+    box-shadow: 0px 0px 30px 0 rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+
+
+
+/* --------------------------------- */
+/* --------- GENERAL STYLES --------- */
+/* --------------------------------- */
+/* --------- Menu --------- */
+.menu {
+    position: relative;
+    width: 21px;
+    cursor: pointer;
+}
+
+.menu-line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    margin: 3px;
+    border-radius: 30px;
+}
+
+/* --------- Search bar --------- */
+.search-bar {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 6px;
+}
+.input-search {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 6px;
+}
+
+/* --------- Search bar --------- */
+.button-adopt {
+    width: 90%;
+    border-radius: 21px;
+    background-color: #fff;
+    border: none;
+    padding: 12px;
+    margin: 12px;
+    font-family: montserratMedium;
+    text-align: center;
+    cursor: pointer;
+}
+.button-adopt--dog {
+    cursor: pointer;
+    background-color: var(--color-green);
+    color: white;
+}
+.button-adopt--cat {
+    background-color: var(--color-orange);
+    color: white;
+}
+.button-adopt--home {
+    background-color: var(--color-blue);
+    color: white;
+}
+
+
+/* --------------------------------- */
+/* --------- HOME STYLES --------- */
+/* --------------------------------- */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    padding-bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--color-blue-light), var(--color-blue));
+}
+.home__position {
+    width: 9px;
+    height: 9px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background-color: white;
+}
+.home__position--selected {
+    background-color: var(--color-blue);
+}
+
+.home__title {
+    padding: 21px 0px;
+}
+.home__title h1 {
+    font-weight: bold;
+    color: var(--color-blue);
+    margin: 21px 0px;
+    font-size: 36px;
+}
+.home__title p {
+    width: 80%;
+    line-height: 21px;
+    color: white;
+    font-size: 14px;
+}
+.home__image figure img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+}
+.home__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-blue);
+    border: none;
+    box-shadow: 0px 0px 12px 0 rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+
+
+
+
+/* --------------------------------- */
+/* --------- PET SELECTION --------- */
+/* --------------------------------- */
+.pet-selection {
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    background-color: #fff;
+    color: var(--color-blue);
+    padding: 9px;
+    width: 140px;
+    border-radius: 21px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.pet-selection span {
+    padding-left: 12px;
+}
+
+.pet-selection--dog {
+    background-color: var(--color-green);
+    color: white;
+}
+
+.pet-selection--cat {
+    background-color: var(--color-orange);
+    color: white;
+}
+
+
+/* ----------------------------- */
+/* --------- DASHBOARD --------- */
+/* ----------------------------- */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 12px;
+    padding-bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.dashboard__dogs {
+    background-color: var(--color-green-light);
+}
+.dashboard__cats {
+    background-color: var(--color-orange-light);
+}
+.dashboard__header h2 {
+    font-size: 17px;
+}
+
+.dashboard-pets {
+    display: grid;
+    place-items: center;
+    grid-gap: 12px;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-auto-flow: row;
+}
+
+
+/* ---------------------------- */
+/* --------- PET CARD --------- */
+/* ---------------------------- */
+.pet-card {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    width: 120px;
+    height: 180px;
+    max-height: 300px;
+    border-radius: 21px;
+    overflow: hidden;
+    cursor: pointer;
+    color: var(--color-blue);
+}
+.pet-card:hover.pet-card--dog, .pet-card:hover.pet-card--cat{
+    background-color: #fff !important;
+}
+.pet-card.pet-card--dog:hover .pet-card__content {
+    background-color: var(--color-green) !important;
+    color: white;
+}
+.pet-card.pet-card--cat:hover .pet-card__content {
+    background-color: var(--color-orange) !important;
+    color: white;
+}
+.pet-card--dog {
+    background-color: var(--color-green);
+}
+.pet-card--cat {
+    background-color: var(--color-orange);
+}
+
+.pet-card__image {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    max-height: 110px;
+}
+.pet-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.pet-card__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    padding: 12px;
+}
+
+.pet-card__name {
+    font-size: 18px;
+}
+.pet-card__race {
+    font-size: 12px;
+}
+.pet-card__price {
+    align-self: flex-end;
+    justify-self: flex-end;
+    font-size: 12px;
+}
+
+
+
+/* ------------------------------------ */
+/* --------- PET DETAIL --------- */
+/* ------------------------------------ */
+.pet-detail-header {
+    padding: 12px;
+    position: absolute;
+    z-index: 999;
+}
+.home.pet-detail.pet-detail--dog {
+    background-color: var(--color-green-light);
+}
+.home.pet-detail.pet-detail--cat {
+    background-color: var(--color-orange-light);
+}
+.pet-detail {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    background-color: var(--color-green-light);
+    background: none;
+}
+
+.pet-characteristics {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: 0px;
+    padding: 12px;
+}
+
+.pet-characteristic {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 12px;
+    border-radius: 12px;
+    height: 60px;
+    max-width: 90px;
+}
+
+.pet-characteristic strong {
+    font-size: 12px;
+}
+.pet-characteristic span {
+    font-size: 12px;
+}
+
+.pet-detail__content {
+    padding: 12px;
+    color: var(--color-blue);
+}
+
+.pet-detail__content h2 {
+    font-family: montserratBold;
+}
+.pet-detail__content strong {
+    font-family: montserratBold;
+}
+.pet-detail--dog {
+    background-color: var(--color-green);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.pet-detail--cat {
+    background-color: var(--color-orange);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.pet-detail__image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.pet-detail__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pet-detail__owner {
+    padding: 12px;
+    color: var(--color-blue);
+}
+.pet-detail__owner figure {
+    margin-right: 12px;
+}
+
+
+
+
+/* ------------------------------------ */
+/* --------- PET MENU STLYES --------- */
+/* ------------------------------------ */
+.pet-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(white, rgba(255,255,255, .6));
+    z-index: 999;
+    padding: 12px;
+}
+
+.pet-menu-header {
+    display: flex;
+    flex-direction: row;
+}
+.pet-menu-close {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+.menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 21px;
+    height: 30px;
+}
+
+.menu-close-line {
+    width: 100%;
+    margin: 3px;
+    height: 3px;
+    background-color: #000;
+}
+.menu-close-line-1 {
+    position: absolute;
+    transform: rotate(45deg);
+}
+.menu-close-line-2 {
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.pet-menu-buttons {
+    margin-top: 21px;
+}

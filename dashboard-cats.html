@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <main class="app">
+       <section class="w-100 h-100 dashboard dashboard__cats">
+           <header class="w-100 d-flex align-center justify-between home__header dashboard__header">
+               <a href="./dashboard-dogs.html">
+                   <img width="30px" src="./images/chevron-left.svg" alt="">
+               </a>
+               <h2>Search</h2>
+               <a href="./dashboard-menu.html">
+                    <div class="menu">
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                    </div>
+                </a>
+            </header>
+
+           <section class="home__title d-flex flex-column w-100 align-center justify-center text-center">
+               <div class="w-100 d-flex align-center search-bar">
+                   <img src="./images/search.svg" class="search-bar-icon"></img src="./images/search.svg">
+                   <input placeholder="search" type="text" class="input-search">
+               </div>
+
+               <article class="w-100 d-flex flex-row align-center justify-between">
+                   <a href="./dashboard-dogs.html" class="pet-selection">
+                       <img width="24px" src="./images/fa-solid_dog.svg" alt="">
+                       <span>Dogs</span>
+                   </a>
+
+                   <div class="pet-selection pet-selection--cat">
+                    <img width="24px" src="./images/fa-solid_cat.svg" alt="">
+                    <span>Cats</span>
+                </div>
+               </article>
+           </section>
+
+           <section class="p-relative d-flex flex-column align-center justify-center w-100 dashboard-pets">
+
+            <a href="./cat-detail.html" class="pet-card pet-card--cat">
+                <figure class="pet-card__image"><img src="./images/alex.png" alt=""></figure>
+                <div class="pet-card__content">
+                    <div>
+                        <h3 class="pet-card__name">Alex</h3>
+                        <span class="pet-card__race">Greek</span>
+                    </div>
+
+                    <strong class="pet-card__price">$280</strong>
+                </div>
+            </a>
+            <a href="./cat-detail.html" class="pet-card pet-card--cat">
+                <figure class="pet-card__image"><img src="./images/ariana.png" alt=""></figure>
+                <div class="pet-card__content">
+                    <div>
+                        <h3 class="pet-card__name">Ariana</h3>
+                        <span class="pet-card__race">Persa</span>
+                    </div>
+
+                    <strong class="pet-card__price">$300</strong>
+                </div>
+            </a>
+            <a href="./cat-detail.html" class="pet-card pet-card--cat">
+                <figure class="pet-card__image"><img src="./images/remi.png" alt=""></figure>
+                <div class="pet-card__content">
+                    <div>
+                        <h3 class="pet-card__name">Remi</h3>
+                        <span class="pet-card__race">White</span>
+                    </div>
+
+                    <strong class="pet-card__price">$300</strong>
+                </div>
+            </a>
+            <a href="./cat-detail.html" class="pet-card pet-card--cat">
+                <figure class="pet-card__image"><img src="./images/zoe.png" alt=""></figure>
+                <div class="pet-card__content">
+                    <div>
+                        <h3 class="pet-card__name">Zoe</h3>
+                        <span class="pet-card__race">Fuffy</span>
+                    </div>
+
+                    <strong class="pet-card__price">$300</strong>
+                </div>
+            </a>
+               
+           </section>
+       </section> 
+    </main>
+    
+</body>
+</html>
